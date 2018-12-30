@@ -1,0 +1,32 @@
+import React, { Component } from "react";
+
+class NewComment extends Component {
+  state = {
+    newComment: ""
+  };
+
+  sendComment = () => {
+    this.props.sendComment(this.state.newComment);
+    this.setState({
+      newComment: ""
+    });
+  };
+
+  handleChange = event => {
+    this.setState({
+      newComment: event.target.value
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        {/*  NEW COMMENT */}
+        <textarea value={this.state.newComment} onChange={this.handleChange} />
+        <button onClick={this.sendComment}>Enviar</button>
+      </div>
+    );
+  }
+}
+
+export default NewComment;
