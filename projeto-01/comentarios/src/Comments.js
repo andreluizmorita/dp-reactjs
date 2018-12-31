@@ -1,8 +1,8 @@
-import React from "react";
-import Comment from "./Comment";
+import React from 'react'
+import Comment from './Comment'
 
 const Comments = ({ comments }) => {
-  const keys = Object.keys(comments);
+  const keys = Object.keys(comments)
 
   return (
     <div>
@@ -10,7 +10,7 @@ const Comments = ({ comments }) => {
         <Comment key={key} c={comments[key]} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Comments;
+export default Comments
